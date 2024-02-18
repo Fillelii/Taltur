@@ -1,0 +1,180 @@
+body {
+  padding: 0;
+  margin: 0;
+  background-color: #212121;
+  background-image: url(https://images.unsplash.com/photo-1707343843437-caacff5cfa74?q=80&w=3475&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+  background-size: cover;
+}
+
+#master-wrapper {
+  
+background-color: rgba(30,30,30,0.6);
+  margin: 0;
+  height: 100vh;
+  
+
+  
+}
+
+#controls {padding: 2%;}
+
+.sys_btn {
+  margin-left: 2%;
+  border-radius: 0;
+  background: none;
+  color: #fff;
+  border: 1px solid #fff;
+  padding: 2%;
+  font-size: 15px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  cursor: pointer;
+}
+
+#delegatNr {
+  font-size: 15px;
+  padding: 2%;
+  background: #ffffff40;
+  border: none;
+  color: #fff;
+}
+
+#box_container {
+  padding: 0 2%;
+  width: 100vw;
+  display: grid;
+  grid-template-columns: 100px 100px 100px 100px;
+  grid-row: auto auto auto auto auto auto;
+  grid-column-gap: 2%;
+  grid-row-gap: 2%;
+  flex-direction: row;
+  flex-basis: 100%;
+  transition: .2s ease-in-out;
+  position: relative;
+  top: 0;
+  z-index: 9999;
+}
+.box {
+  grid-column: span 1;
+  display:inline-block;
+  background-color: #99999930;
+  content: "";
+  height: 100px;
+  width: 100px;
+  min-width: 100px;
+  font-family: sans-serif;
+  color: white;
+  text-align: center;
+  margin: 4px;
+  transition: .2s ease-in-out;
+
+}
+
+.box:first-of-type {
+  background-color: #99ff00;
+  color: #333;
+}
+.box:nth-of-type(2) {
+  background-color: #ffff00;
+  color: #333;
+}
+
+.box > p {
+  font-weight: 100;
+  font-size: 2em;
+  line-height: 1.1;
+  letter-spacing: 2px;
+}
+/*.box * {background-color: #00ff0050}*/
+
+.close_btn{
+  text-align: right;
+  padding: 1%;
+  width: 84px;
+  position: absolute;
+  height: 40px;
+  line-height: 1;
+  cursor: pointer;
+  opacity: 0;
+  transition:.1s ease-in-out;
+}
+
+.box:hover .close_btn {
+  opacity: 100;
+  transition:.1s ease-in-out;
+}
+
+#box_background {
+  display: block;
+  position: absolute;
+  top: -20px;
+  z-index: 1;
+  
+  
+}
+#aktiv_taltur {
+  
+  background: green;
+  height: 120px;
+}
+
+
+/*SETTINGS*/
+
+#menu_container {
+  float: right; 
+  padding: 1%;
+}
+
+#popup_menu_container {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  z-index: 999;
+  background-color: #00000033;
+}
+
+#popup_menu {
+  color: #fff;
+  font-family: sans-serif;
+  padding: 2% 4%;
+  width: 500px;
+  height: 70%;
+  background-color: #343434;
+  margin: auto;
+  margin-top: 5px;
+  z-index: 1;
+  box-shadow: 0px 0px 90px #000;
+}
+
+#close_popup_menu {
+  color: #fff;
+  font-family: sans-serif;
+  float: right;
+  margin-right: 20px;
+  cursor: pointer;
+}
+
+.menu_section * {
+  display: block;
+}
+
+.menu_section > p {
+  font-size: 90%;
+  color: #999;
+}
+
+.menu_section > p:first-of-type {
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  
+}
+
+#backgroundURL {width: 400px;}
+
+#backgroundControlButtons {
+
+  margin-top: 10px;
+  
+}

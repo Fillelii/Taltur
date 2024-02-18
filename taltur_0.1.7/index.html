@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        
+        <div id="master-wrapper">
+  <div id="menu_container"><button onclick="openMenu();">Settings</button>
+</div>
+<div id="popup_menu_container">
+  <div id="popup_menu">
+    <p id="close_popup_menu" onclick="closeMenu();">x</p>
+    <h2>Settings</h2>
+    <div id="menu_section_background" class="menu_section">
+      <p>Background Image</p>
+      <p>Paste the URL to desired background image</p>
+      <input type="text" id="backgroundURL">
+      <div id="backgroundControlButtons">
+          <input type="submit" onclick="setBackground();"/>
+          <button onclick="resetBackground();">Reset</button>
+</div>
+    </div>
+  </div>
+</div>
+<div id="controls"><input type="number" id="delegatNr"><input onclick="addBox()" type="submit" value="Lägg till" class="sys_btn"><button onclick="delBox()" class="sys_btn">Nästa</button>
+</div>
+<br><br>
+<div id="box_container">
+<!--<div id="sample" class="box">Sample</div>-->
+</div>
+<div id="box_background">
+  
+  <div id="aktiv_taltur"></div>
+  
+
+</div>
+</div>
+        
+<script src="script.js"></script>    
+</body>
+</html>
