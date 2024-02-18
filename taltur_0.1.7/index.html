@@ -2,13 +2,17 @@
 <html>
     <head>
         <link rel="stylesheet" href="style.css">
+        <meta charset="utf-8">
     </head>
     <body>
         
         <div id="master-wrapper">
-  <div id="menu_container"><button onclick="openMenu();">Settings</button>
+  <div id="menu_container">
+      <button class="sys_btn_small sys_btn" onclick="openMenu();">Settings</button>
 </div>
-<div id="popup_menu_container">
+
+            <!-- SETTINGS POPUP -->
+            <div id="popup_menu_container">
   <div id="popup_menu">
     <p id="close_popup_menu" onclick="closeMenu();">x</p>
     <h2>Settings</h2>
@@ -17,15 +21,27 @@
       <p>Paste the URL to desired background image</p>
       <input type="text" id="backgroundURL">
       <div id="backgroundControlButtons">
-          <input type="submit" onclick="setBackground();"/>
-          <button onclick="resetBackground();">Reset</button>
+          <input class="sys_btn sys_btn_large" type="submit" onclick="setBackground();"/>
+          <button class="sys_btn sys_btn_large" onclick="resetBackground();">Reset</button>
 </div>
     </div>
+      
+      <div class="menu_section" id="menu_section_generator">
+        <p>Entry Generator</p>
+          <p>Generates random entries. For testing only. Please specify ammount of entries to be generated.</p>
+          <input type="number" id="generateAmmount"/><input class="sys_btn sys_btn_large" type="submit" value="Generate" onclick="generateEntries();"/>
+      </div>
+      
   </div>
 </div>
-<div id="controls"><input type="number" id="delegatNr"><input onclick="addBox()" type="submit" value="Lägg till" class="sys_btn"><button onclick="delBox()" class="sys_btn">Nästa</button>
+
+            
+        <!-- Controls -->    
+            <div id="controls"><input type="number" id="delegatNr"><input onclick="addBox()" type="submit" value="Lägg till" class="sys_btn_large sys_btn"><button onclick="delBox()" class="sys_btn_large sys_btn">Nästa</button>
 </div>
 <br><br>
+            
+            <!-- Boxes -->
 <div id="box_container">
 <!--<div id="sample" class="box">Sample</div>-->
 </div>
@@ -36,7 +52,8 @@
 
 </div>
 </div>
-        
-<script src="script.js"></script>    
+<script src="settings.js"></script>        
+<script src="script.js"></script>
+<script src="tools.js"></script>
 </body>
 </html>
