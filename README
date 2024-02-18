@@ -1,0 +1,22 @@
+==================
+||    README    ||
+==================
+
+Taltur is a simple yet cool web-app for keeping track of turns of speech (swedish: taltur). This can be useful in big meetings where you have to keep track on who has asked to speak and in what order.
+
+How to use taltur:
+
+Simply enter the delegate's number and press "Lägg till" (Add). The green square indicates the delegate in question has now his or her time to speak. 
+
+If more than one entry exists, the yellow box menas that that delegate is next up and shall be prepared. All other boxes are further back in the queue in order from left to right, downwards.
+
+
+In the settings tab you're able to select a custom background for your dashboard.
+
+NOTE! THE APP DOES NOT SAVE PROGRESS BETWEEN LOAD-INS. RELOADING OR CLOSING THE PAGE WILL RESULT IN DATA-LOSS.
+
+
+Written By Felix Lindvik 2024
+
+felixlindvik.com
+felix@felixlindvik.com
