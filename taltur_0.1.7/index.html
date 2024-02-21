@@ -8,42 +8,25 @@
         
         <div id="master-wrapper">
   <div id="menu_container">
-      <button class="sys_btn_small sys_btn" onclick="openMenu();">Settings</button>
-</div>
-
-            <!-- SETTINGS POPUP -->
-            <div id="popup_menu_container">
-  <div id="popup_menu">
-    <p id="close_popup_menu" onclick="closeMenu();">x</p>
-    <h2>Settings</h2>
-    <div id="menu_section_background" class="menu_section">
-      <p>Background Image</p>
-      <p>Paste the URL to desired background image</p>
-      <input type="text" id="backgroundURL">
-      <div id="backgroundControlButtons">
-          <input class="sys_btn sys_btn_large" type="submit" onclick="setBackground();"/>
-          <button class="sys_btn sys_btn_large" onclick="resetBackground();">Reset</button>
-</div>
-    </div>
-      
-      <div class="menu_section" id="menu_section_generator">
-        <p>Entry Generator</p>
-          <p>Generates random entries. For testing only. Please specify ammount of entries to be generated.</p>
-          <input type="number" id="generateAmmount"/><input class="sys_btn sys_btn_large" type="submit" value="Generate" onclick="generateEntries();"/>
-      </div>
-      
-  </div>
-</div>
-
-            
+      <button class="sys_btn_settings sys_btn" onclick="openMenu();">Inställningar</button>
+</div>      
         <!-- Controls -->    
-            <div id="controls"><input type="number" id="delegatNr"><input onclick="addBox()" type="submit" value="Lägg till" class="sys_btn_large sys_btn"><button onclick="delBox()" class="sys_btn_large sys_btn">Nästa</button>
+            <div id="controls"><input type="text" id="delegatNr"><input onclick="addBox()" type="submit" value="Lägg till" class="sys_btn_large sys_btn"><button onclick="delBox()" class="sys_btn_large sys_btn">Nästa</button>
 </div>
 <br><br>
             
+            
+            
+           
+            
+            
             <!-- Boxes -->
 <div id="box_container">
+     <!-- PAGE HEADER-->
+    <div id="page_header"></div>
+    <div id="box_grid">
 <!--<div id="sample" class="box">Sample</div>-->
+        </div>
 </div>
 <div id="box_background">
   
@@ -51,9 +34,71 @@
   
 
 </div>
+            
+            
+            
+                       <!-- SETTINGS POPUP -->
+            <div id="popup_menu_container" class="popup_container">
+  <div id="popup_menu" class="popup_window">
+    <p id="close_popup_menu" onclick="closeMenu();">x</p>
+    <h2>Settings</h2>
+    <div id="general_settings">
+        
+        <!-- Background-image-->
+      <div id="menu_section_background" class="menu_section">
+      <p>Background Image</p>
+      <p>Paste the URL to desired background image</p>
+      <input type="text" id="backgroundURL">
+      <div id="backgroundControlButtons">
+          <input class="sys_btn sys_btn_large" type="submit" onclick="setBackground();"/>
+          <button class="sys_btn sys_btn_large" onclick="resetBackground();">Reset</button>
+          </div>
+        </div>
+        
+        <!-- Title -->
+         <div id="menu_section_background" class="menu_section">
+      <p>Header / Title</p>
+      <p>Your meeting title or what ever you want to be shown in the header.</p>
+      <input type="text" id="pageHeaderInput">
+      <div id="backgroundControlButtons">
+          <input class="sys_btn sys_btn_large" type="submit" onclick="setPageHeader();"/>
+          <button class="sys_btn sys_btn_large" onclick="resetBackground();">Reset</button>
+          </div>
+        </div>
+        
+<!--
+        <div class="menu_section">
+       <center> <button class="sys_btn sys_btn_small" onclick="saveSettings();">Save settings</button></center>
+        </div>-->
+      </div>
+
+      
+      
+      
+      <center><button class="sys_btn sys_btn_large" id="toggle_advanced_settings_btn" onclick="openAdvancedSettings();">Advancerade verktyg</button></center>
+      <div id="advanced_settings" style="display:none;">
+      <div class="menu_section" id="menu_section_generator">
+        <p>Entry Generator</p>
+          <p>Generates random entries. For testing only. Please specify ammount of entries to be generated.</p>
+          <input type="number" id="generateAmmount"/><input class="sys_btn sys_btn_large" type="submit" value="Generate" onclick="generateEntries();"/>
+      </div>
+    </div>
+      
+  </div>
 </div>
+            <!-- SAVE MENU POPUP -->
+            <div id="popup_save_container" class="popup_container">
+            <div id="loadSavedProgress" class="popup_window">
+                <h1>Välkommen till Taltur</h1>
+                <h3>Vill du läsa in din senaste session igen?</h3>
+                <button class="sys_btn sys_btn_large" onclick="getProgress();">JA</button><button class="sys_btn sys_btn_large" onclick="closeSaveMenu()">NEJ</button>
+                </div>
+            </div>
+</div>
+<script src="save.js"></script>
 <script src="settings.js"></script>        
 <script src="script.js"></script>
 <script src="tools.js"></script>
+        
 </body>
 </html>

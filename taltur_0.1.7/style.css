@@ -4,6 +4,8 @@ body {
   background-color: #212121;
   background-image: url(https://images.unsplash.com/photo-1707343843437-caacff5cfa74?q=80&w=3475&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
   background-size: cover;
+    color: #fff;
+    font-family: sans-serif;
 }
 
 * {
@@ -56,11 +58,7 @@ background-color: rgba(30,30,30,0.6);
 #box_container {
   padding: 0 2%;
   /*width: 100vw;*/
-  display: grid;
-  grid-template-columns: 100px 100px 100px 100px;
-  grid-row: auto auto auto auto auto auto;
-  grid-column-gap: 2%;
-  grid-row-gap: 2%;
+ 
   flex-direction: row;
   flex-basis: 100%;
   transition: .2s ease-in-out;
@@ -68,6 +66,16 @@ background-color: rgba(30,30,30,0.6);
   top: 0;
   z-index: 99;
 }
+
+#box_grid{
+    display: grid;
+    grid-template-columns: 100px 100px 100px 100px;
+    grid-row: auto auto auto auto auto auto;
+    grid-column-gap: 2%;
+    grid-row-gap: 2%;
+}
+
+
 .box {
   grid-column: span 1;
   display:inline-block;
@@ -141,20 +149,23 @@ background-color: rgba(30,30,30,0.6);
     margin-right: 5%;
 }
 
-#popup_menu_container {
+.popup_container {
   position: fixed;
   width: 100vw;
   height: 100vh;
   z-index: 999;
   background-color: #00000033;
+    top: 0;
 }
 
-#popup_menu {
+#popup_menu_container {display: none;}
+
+.popup_window {
   color: #fff;
   font-family: sans-serif;
   padding: 2% 4%;
   width: 500px;
-  height: 70%;
+  /*height: 70%;*/
   background-color: #343434;
   margin: auto;
   margin-top: 5px;
@@ -173,7 +184,7 @@ background-color: rgba(30,30,30,0.6);
 .menu_section {
     padding: 2% 2%;
     background: #3f3f3f;
-    margin-top: 7%;
+    margin-top: 3%;
 }
 
 .menu_section * {
@@ -200,13 +211,13 @@ background-color: rgba(30,30,30,0.6);
   
 }
 .sys_btn_small {
-    margin: 10% 0;
+    margin: 2% 0;
   border-radius: 0;
   background: none;
   color: #fff;
   border: 1px solid #fff;
-  padding: 10%;
-  font-size: 15px;
+  padding: 2%;
+  font-size: 10px;
   text-transform: uppercase;
   letter-spacing: 2px;
   cursor: pointer;
@@ -220,3 +231,41 @@ background-color: rgba(30,30,30,0.6);
 
 
 
+
+.popup_window {
+    
+}
+
+
+/*SAVE POPUP*/
+
+#loadSavedProgress {
+    height: 200px;
+}
+
+#toggle_advanced_settings_btn {
+    margin-top: 40px;
+    font-size: .6em;
+}
+
+#advanced_settings {
+    display: none;
+}
+
+#page_header {
+    grid-column: 1/5;
+    
+}
+
+.sys_btn_settings {
+    margin: 10% 0;
+  border-radius: 0;
+  background: none;
+  color: #fff;
+  border: 1px solid #fff;
+  padding: 10%;
+  font-size: 15px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  cursor: pointer;
+}

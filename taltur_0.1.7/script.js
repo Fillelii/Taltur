@@ -25,16 +25,20 @@ function addBox() {
   createBox.setAttribute("id", internalId);
   createBox.setAttribute("class", "box");
   createBox.innerHTML = '<div class="close_btn" onclick="this.parentNode.remove()">X</div><p>'+delegatNr+'</p>';
-  document.getElementById("box_container").appendChild(createBox);
+  document.getElementById("box_grid").appendChild(createBox);
   internalId++;
   clearInput();
+    writeProgress();
 }
 
 //Delete box at end of taltur
 
 function delBox() {
   
-  var toRemove = document.getElementById(activeId);
+    
+
+    
+  var toRemove = document.getElementById("box_grid").firstChild;
   toRemove.remove();
   activeId++;
 
@@ -65,4 +69,6 @@ input.addEventListener('keyup', (e) =>  {
   }
 }                     
 );
+
+
 
