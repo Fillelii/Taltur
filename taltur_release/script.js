@@ -123,7 +123,7 @@ function delBox1() {
   
 
     
-  var toRemove = document.getElementById("box_grid_1").nthChild(2);
+  var toRemove = document.getElementById("box_grid_1").firstChild;
   toRemove.remove();
   activeId++;
 
