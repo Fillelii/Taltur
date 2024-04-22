@@ -11,7 +11,7 @@
       <button class="sys_btn_settings sys_btn" onclick="openMenu();">Inställningar</button>
 </div>      
         <!-- Controls -->    
-            <div id="controls"><input type="text" id="delegatNr" placeholder=" Ange Delegatnr."><input onclick="addBox()" type="submit" value="Lägg till" class="sys_btn_large sys_btn"><button onclick="delBox1()" class="sys_btn_large sys_btn">Nästa</button>
+            <div id="controls"><input type="text" id="delegatNr" placeholder=" Ange Delegatnr."><input onclick="newEntry()" type="submit" value="Lägg till" class="sys_btn_large sys_btn"><button onclick="delBox1()" class="sys_btn_large sys_btn">Nästa</button>
 </div>
 <br><br>
             
@@ -94,7 +94,7 @@
   </div>
 </div>
             <!-- SAVE MENU POPUP -->
-            <div id="popup_save_container" class="popup_container">
+            <div id="popup_save_container" class="popup_container" style="display: none;">
             <div id="loadSavedProgress" class="popup_window">
                 <h1>Välkommen till Taltur</h1>
                 <h3>Vill du läsa in din senaste session igen?</h3>
