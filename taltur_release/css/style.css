@@ -13,16 +13,19 @@ body {
 }
 
 #master-wrapper {
-  
 background-color: rgba(30,30,30,0.6);
-  margin: 0;
-  height: 100vh;
+
   
 
   
 }
 
-#controls {padding: 2%;}
+.divider {
+    border-bottom: 1px solid #aaa;
+    margin-bottom: 1em;
+}
+
+#controls {}
 
 .sys_btn {
     transition: .1s ease-in-out;
@@ -35,7 +38,7 @@ background-color: rgba(30,30,30,0.6);
 }
 
 .sys_btn_large {
-  margin-left: 2%;
+  
   border-radius: 0;
   background: none;
   color: #fff;
@@ -49,40 +52,26 @@ background-color: rgba(30,30,30,0.6);
 
 #delegatNr {
   font-size: 15px;
-  padding: 2%;
   background: #ffffff40;
   border: none;
   color: #fff;
 }
 
 #box_container {
-  padding: 0 2%;
   /*width: 100vw;*/
  
-  flex-direction: row;
-  flex-basis: 100%;
-  transition: .2s ease-in-out;
-  position: relative;
-  top: 0;
-  z-index: 99;
+
 }
 
 #box_grid{
-    display: grid;
-    grid-template-columns: 100px 100px 100px 100px;
-    grid-row: auto auto auto auto auto auto;
-    grid-column-gap: 2%;
-    grid-row-gap: 2%;
+
 }
 
 
 .box {
-  grid-column: span 1;
-  display:inline-block;
   background-color: #99999930;
   content: "";
   height: 100px;
-  width: 100px;
   min-width: 100px;
   font-family: sans-serif;
   color: white;
@@ -144,9 +133,8 @@ background-color: rgba(30,30,30,0.6);
 /*SETTINGS*/
 
 #menu_container {
-  float: right; 
-  padding: 1%;
-    margin-right: 5%;
+ /* float: right; */
+
 }
 
 .popup_container {
@@ -253,7 +241,7 @@ background-color: rgba(30,30,30,0.6);
 }
 
 #page_header {
-    grid-column: 1/5;
+ 
     
 }
 

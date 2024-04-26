@@ -1,46 +1,55 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <link rel="stylesheet" href="style.css">
-        <meta charset="utf-8">
+        <link rel="stylesheet" href="css/foundation.css">
+        <link rel="stylesheet" href="css/app.css">
+        <link rel="stylesheet" href="css/style.css">
+        <meta charset="utf-8"> 
     </head>
+    
     <body>
-        
-        <div id="master-wrapper">
-  <div id="menu_container">
-      <button class="sys_btn_settings sys_btn" onclick="openMenu();">Inställningar</button>
-</div>      
-        <!-- Controls -->    
-            <div id="controls"><input type="text" id="delegatNr" placeholder=" Ange Delegatnr."><input onclick="newEntry()" type="submit" value="Lägg till" class="sys_btn_large sys_btn"><button onclick="delBox1()" class="sys_btn_large sys_btn">Nästa</button>
-</div>
-<br><br>
+            
+        <div class="grid-container" id="master-wrapper">
+            <div id="header" class="grid-x">
+                <h1 class="cell">Taltur</h1>
+            </div>
+            
+            <!-- Settings -->
+            <div class="grid-x grid-margin-x">
+                
+                    <button class="cell small-6 large-2 button" onclick="openMenu();">Ladda senaste</button>
+                    <button class="cell small-6 large-2 button">Inställningar</button>
+            
+            </div>
+            <div class="divider"></div>
+            
+            <!-- INPUT AND CONTROLS -->
+            <div class="grid-x grid-margin-x" id="input">
+                <input class="cell" id="delegatNr" placeholder="Delegatnummer" type="text">
+                <input class="cell small-4 button" type="submit" value="Lägg till" onclick="newEntry()">
+                <button class="cell small-4 button">Sakupplysning</button>
+                <button class="cell small-4 button" onclick="delBox1()">Nästa</button>
+            </div>
+            
+            <div class="divider"></div>
+            
+            <h3>Nya Talare</h3>
+            <div class="cell grid-x" id="box_grid_1">
             
             
             
-           
+            </div>
+            
+            <h3>Återkommande Talare</h3>
+            <div class="cell grid-x" id="box_grid_2">
             
             
-            <!-- Boxes -->
-<div id="box_container">
-     <!-- PAGE HEADER-->
-    <div id="page_header"></div>
-    <h3>Nya talare</h3>
-    <div id="box_grid_1">
-        
-<!--<div id="sample" class="box">Sample</div>-->
-        </div>
-    <h3>Återkommande talare</h3>
-    <div id="box_grid_2">
-<!--<div id="sample" class="box">Sample</div>-->
-        </div>
-</div>
-</div>
-<div id="box_background">
-  
-  <div id="aktiv_taltur"></div>
-  
-
-</div>
+            
+            </div>
+            
+        </div>        
+            
+ 
             
             
             
@@ -101,11 +110,13 @@
                 <button class="sys_btn sys_btn_large" onclick="getProgress();">JA</button><button class="sys_btn sys_btn_large" onclick="closeSaveMenu()">NEJ</button>
                 </div>
             </div>
-</div>
-<script src="save.js"></script>
-<script src="settings.js"></script>        
-<script src="script.js"></script>
-<script src="tools.js"></script>
-        
+
+
+<script src="js/app.js"></script>  
+<script src="js/save.js"></script>
+<script src="js/settings.js"></script>        
+<script src="js/script.js"></script>
+<script src="js/tools.js"></script>
+     
 </body>
 </html>

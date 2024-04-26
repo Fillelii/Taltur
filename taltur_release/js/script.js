@@ -48,7 +48,7 @@ function newEntry() {
     
     // Defining internal functions
     // nothing here
-    
+    console.log("New Entry")
     var delegatNr = document.getElementById("delegatNr").value; // fetching input value
     console.log("Fetched value is: " + delegatNr);
 
@@ -162,4 +162,8 @@ input.addEventListener('keyup', (e) =>  {
 });
 
 
+
+function scriptCheck() {
+    console.log("Script is available");
+}
 
