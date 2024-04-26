@@ -121,12 +121,13 @@ function removeFromQueue(id, queue) {
 
 function delBox1() {
   
-
+    if (queueNew != "") {
     
-  var toRemove = document.getElementById("box_grid_1").firstChild;
-  toRemove.remove();
-  activeId++;
-
+  //var toRemove = document.getElementById("box_grid_1").firstChild;
+    
+    toRemove.remove();
+    activeId++;
+    }
   
 }
 
